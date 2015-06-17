@@ -1,2 +1,2 @@
-# JMac-Masonry
-JMac Masonry Restoration website.
+# BickPress
+A wordpress theme for an artist.
