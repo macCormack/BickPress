@@ -1,0 +1,376 @@
+@media #{$screen} {
+	 //////////////////////////////
+	//			 HERO STYLES 				//
+ //////////////////////////////
+ 	.hero, .news__hero {
+	  background: $primary-color;
+  	padding: rem-calc(30) 0;
+		margin: - rem-calc(32) 0 rem-calc(32);
+  	position: relative;
+  	text-align: center;
+  	height: auto;
+
+  	h1 {
+  		font-weight: 500;
+			color: $white;
+			text-transform: uppercase;
+  	}
+  	h1 a, h4 { color: #fff; }
+  }
+
+	 //////////////////////////////
+	//			 BUTTON STYLES 			//
+ //////////////////////////////
+
+	.btn__share {
+	  position: absolute;
+	  display: block;
+	  bottom:-25%;
+	  right: 0;
+	  width: 30px;
+	  height: 30px;
+	  cursor: pointer;
+
+	  	svg {
+	  		fill:$jet;
+	  		width: 30px;
+	  		height: 30px;
+	  	}
+	}
+
+	.tooltips {
+	  position: relative;
+	  display: inline;
+	}
+	.tooltips span {
+	  position: absolute;
+	  width:90px;
+	  color: #FFFFFF;
+	  background: #000000;
+	  height: 30px;
+	  line-height: 30px;
+	  text-align: center;
+	  visibility: hidden;
+	  border-radius: 2px;
+	}
+	.tooltips span:after {
+	  content: '';
+	  position: absolute;
+	  top: -8px;
+	  left: 50%;
+	  margin-left: -8px;
+	  width: 0; height: 0;
+	  border-bottom: 8px solid #000000;
+	  border-right: 8px solid transparent;
+	  border-left: 8px solid transparent;
+	}
+	.btn__share:hover, .btn__share:focus, .btn__share:active {
+		.tooltips span {
+		  visibility: visible;
+		  opacity: 0.8;
+		  bottom: -23px;
+		  margin-left: -25px;
+		  z-index: 999;
+		} 
+	}
+
+	 //////////////////////////////
+	//				FORM STYLES				//
+ //////////////////////////////
+
+	   	.input__container {
+	   		position: relative;
+	   		margin:1.5em 0 2em;
+	   	}
+
+	   	label {
+	   		position: absolute;
+			top: 14px;
+			transform:translateY(-9px);
+			left: 8px;
+			color: #aaa;
+			transition: all 0.2s;
+			cursor: text;
+	   	}
+
+	   	input {
+	   		border-bottom: 1px solid $jet !important;
+	   	}
+
+	   	textarea {
+	   		border-bottom: 1px solid $jet;
+	   		border-left: 1px solid $jet;
+	   	}
+
+	   	input:focus, input.focused, textarea:focus, textarea.focused {
+
+		border-bottom: 1px solid $primary-color;
+
+			+ label {
+				font-size: 13px;
+				line-height: 12px;
+				top: 0px;
+				transform:translateY(-14px);
+				color: #777;
+			}
+		}
+
+
+	 //////////////////////////////
+	//		GALLERY STYLES 		//
+   //////////////////////////////
+
+	.gallery-icon {
+		position: relative;
+		margin: 0.9375rem 0;
+
+		img {
+			width: 100%;
+			height: 400px;
+		}
+	}
+
+	.gallery-caption {
+		position: absolute;
+		width: 100%;
+		padding: 2em 0;
+		bottom: 0;
+		background: $jet;
+		color: $white;
+		text-align: center;
+	}
+
+	 //////////////////////////////
+	//		ACCORDION STYLES 			//
+ //////////////////////////////
+
+	.about__accordion {
+		margin-bottom: 3em;
+	}
+
+	.accordion {
+	margin-bottom: 2px;
+	box-shadow: 1px 2px 3px rgba(0,0,0,.24);
+
+		.content {
+			ul {
+				li {
+					padding-bottom: 0.7em;
+				}
+			}
+		}
+	}
+
+	.accordion-navigation {
+		a {
+			text-transform: uppercase;
+		}
+	}
+
+	 //////////////////////////////
+	//				BLOG STYLES 			//
+ //////////////////////////////
+
+   .main__content {
+   	margin-bottom: 1em;
+  }
+
+ 	.news__container, .sidebar {
+ 		background: $white;
+		box-shadow: 0 2px 3px rgba(0,0,0,.24);
+		padding: 1em;
+		border-radius: 2px;
+ 	}
+
+	.news__container {
+		margin-bottom: 3em;
+		
+
+		h2 {
+			font-size: 1.9em;
+		}
+	}
+
+	.news__thumb {
+		img {
+			width: 100%;
+			height: 400px;
+		}
+	}
+
+	.news__footer {
+		position: relative;
+	}
+
+	.news__share {
+		display: none;
+	}
+
+	.news__footer.active {
+		.news__share {
+			display: block;
+			content: '';
+			position: absolute;
+			top: em-calc(28);
+			right: 6px;
+			width: 100px;
+			height: auto;
+			padding: 1em;
+			background-color: #eee;
+			box-shadow: 0 2px 3px 1px rgba(0,0,0,.1);
+		}
+	}
+
+	 //////////////////////////////
+	//	   SINGLE.PHP STYLES		//
+ //////////////////////////////
+
+   	#allowed_tags {
+   		font-size: 70%;
+   	}
+
+   	.single__header {
+		background: $primary-color;
+		padding: 1em;
+		text-align: center;
+		color: $white;
+
+		h1 {
+			color: $white;
+		}
+
+		.byline.author {
+			margin-bottom: 0;
+		}
+
+		a {
+			color: $jet;
+		}
+	}
+
+	.single__content {
+		margin: 2em 0;
+	}
+
+	 //////////////////////////////
+	//		COMMENT STYLES 		//
+   //////////////////////////////
+
+   .comment__body {
+   		box-shadow:0px 3px 3px rgba(0,0,0,.24);
+   		padding: 1em;
+   		margin-bottom: 0.2em;
+
+   		&:last-child {
+   			margin-bottom: 2em;
+   		}
+   }
+
+    .comment__author {
+    	margin-bottom: 1em;
+
+		img { border-radius: 50%; }
+
+		time { float: right; }
+	}
+
+	.comment__meta {
+		display: inline-block;
+		margin-left: 1em;
+		
+		cite {
+			font-style: normal;
+			text-transform: capitalize;
+			font-weight: 700;
+		}
+	}
+
+	 //////////////////////////////
+	//		SIDEBAR STYLES 		//
+   //////////////////////////////
+
+   	.sidebar {
+   		position: relative;
+   		top: 0;
+   		right:0;
+   		margin-bottom: 1em;
+   		box-shadow: 0 1px 5px rgba(0,0,0,.24);
+
+   		label {display: none;}
+   	}
+
+	 //////////////////////////////
+	//		FOOTER STYLES 		//
+   //////////////////////////////
+
+	.footer {
+		background-color: $jet;
+		padding: 0.5em 1em;
+		height: auto;
+		p {
+			display: inline-block;
+			color: $white;
+			margin: 0 em-calc(10) 0 0;
+		}
+
+		.copy {
+			width: 100%;
+			text-align:left;
+			margin-bottom: em-calc(10);
+		}
+
+		.created {
+			font-size: 10px;
+			float: none;
+		}
+	}
+}
+
+@media #{$xlarge-up} {
+	.gallery-item {
+		width: 30%;
+	}
+
+	.news__hero {
+  	padding: 3em 0 5em;
+  	box-shadow: 0 3px 5px 1px rgba(0,0,0,0.1)
+  }
+
+  .news__inner {
+  	margin: 0 auto;
+  	max-width: 75rem;
+  	width: 100%;
+  }
+
+	.news__main {
+		position: relative;
+		top: -5em;
+   	background-color: #f8f8f8;
+   	padding: 1em 0 0 0;
+		margin-left: 6em;
+	  max-width: 80rem;
+	  border-radius: 2px;
+	  box-shadow: 0 0 5px 1px rgba(0,0,0,0.1);
+	}
+
+	.footer {
+		.copy {
+			width: 55%;
+			text-align: right;
+			margin-bottom: 0;
+		}
+
+		.created {
+			float: right;
+		}
+	}
+}
+
+@media only screen and (min-width:1904px) {
+	.sidebar {
+   		position: fixed;
+   		top: 12.25em;
+   		right: 3em;
+   		width: 370px;
+   	}
+}
