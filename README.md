@@ -1,2 +1,2 @@
 # BickPress
-A wordpress theme for an artist.
+A wordpress theme designed for an artists portfolio
